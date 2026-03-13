@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Query Parameters Editor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Query Parameters Editor</h1>
+    
+    <!-- Current Tab URL Display -->
+    <div class="current-url-section">
+      <label>Current Tab URL:</label>
+      <div class="url-display" id="currentUrl">Loading...</div>
+      <div class="url-info" id="urlInfo">
+        <p class="info-text">When you apply a rule, the parameters in the rule will <strong>replace/add</strong> to existing URL parameters.</p>
+        <div class="params-preview" id="paramsPreview"></div>
+      </div>
+      <!-- Quick Add Button -->
+      <button id="quickAddBtn" class="btn quick-add">Quick Add Rule</button>
+    </div>
+    
+    <!-- Rules List -->
+    <div class="rules-section">
+      <div class="rules-header">
+        <h2>Configured Rules</h2>
+        <button id="addRuleBtn" class="btn primary">Add Rule</button>
+      </div>
+      
+      <div id="rulesList" class="rules-list">
+        <!-- Rules will be rendered here -->
+        <div class="no-rules">No rules configured yet. Click "Add Rule" to create one.</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add/Edit Rule Modal -->
+  <div id="ruleModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle">Add Rule</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+      
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="urlPattern">URL Pattern:</label>
+          <input type="text" id="urlPattern" placeholder="https://example.com/path/">
+        </div>
+        
+        <div class="form-group">
+          <label>Parameters:</label>
+          <div id="parametersList">
+            <!-- Parameter rows will be added here -->
+          </div>
+          <button id="addParamBtn" class="btn secondary">+ Add Parameter</button>
+        </div>
+        
+        <div class="form-group autoapply-group">
+          <label class="autoapply-switch">
+            <input type="checkbox" id="autoApplyCheckbox">
+            <span class="autoapply-slider"></span>
+            <span class="autoapply-label">Auto-Apply on Page Load</span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <button id="cancelBtn" class="btn">Cancel</button>
+        <button id="saveRuleBtn" class="btn primary">Save Rule</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

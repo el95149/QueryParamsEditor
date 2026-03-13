@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Query Parameters Editor",
+  "version": "1.0.0",
+  "description": "Add or override GET URL parameters for configured URL patterns. Useful for setting default sorting, filters, or other query parameters on e-commerce and search sites.",
+  "author": "Angelos Anagnostopoulos",
+  "developer": {
+    "name": "Angelos Anagnostopoulos",
+    "url": "https://anagnostic.org"
+  },
+  "homepage_url": "https://anagnostic.org",
+  "license": "MIT",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "query_params_editor@anagnostic.org"
+    }
+  },
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
