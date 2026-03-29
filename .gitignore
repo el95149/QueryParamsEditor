@@ -2,3 +2,10 @@
 *.iml
 /.idea/
 /.amo-upload-uuid
+
+# Node modules
+node_modules/
+
+# Coverage
+coverage/
+.nyc_output/

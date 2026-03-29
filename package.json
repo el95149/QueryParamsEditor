@@ -1,0 +1,23 @@
+{
+  "name": "query-params-editor",
+  "version": "1.0.0",
+  "description": "Firefox extension to add/override GET URL parameters",
+  "main": "background.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "firefox",
+    "extension",
+    "url",
+    "parameters"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jsdom": "^24.1.0"
+  }
+}
