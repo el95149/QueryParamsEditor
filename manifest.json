@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Query Parameters Editor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add or override GET URL parameters for configured URL patterns. Useful for setting default sorting, filters, or other query parameters on e-commerce and search sites.",
   "author": "Angelos Anagnostopoulos",
   "developer": {
@@ -23,7 +23,13 @@
   ],
   "host_permissions": ["<all_urls>"],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon.svg",
+      "32": "icons/icon.svg",
+      "48": "icons/icon.svg",
+      "96": "icons/icon.svg"
+    }
   },
   "background": {
     "scripts": ["background.js"]

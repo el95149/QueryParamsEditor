@@ -18,7 +18,7 @@ echo ""
 
 # Check if required files exist
 echo "Checking required files..."
-REQUIRED_FILES=("manifest.json" "background.js" "popup.html" "popup.js" "styles.css")
+REQUIRED_FILES=("manifest.json" "background.js" "popup.html" "popup.js" "styles.css" "icons/icon.svg")
 
 for file in "${REQUIRED_FILES[@]}"; do
     if [ ! -f "$file" ]; then
@@ -35,12 +35,12 @@ echo "Creating XPI package..."
 TEMP_DIR=$(mktemp -d)
 
 # Copy all extension files to temp directory
-cp manifest.json background.js popup.html popup.js styles.css "$TEMP_DIR/"
+cp manifest.json background.js popup.html popup.js styles.css icons/icon.svg "$TEMP_DIR/"
 
 # Create the XPI file (ZIP archive with .xpi extension)
 # Change to temp dir, create zip, then change back
 cd "$TEMP_DIR"
-zip -r "${OUTPUT_FILE}" manifest.json background.js popup.html popup.js styles.css
+zip -r "${OUTPUT_FILE}" manifest.json background.js popup.html popup.js styles.css icons/icon.svg
 cd - > /dev/null
 
 # Move the XPI from temp dir to current directory

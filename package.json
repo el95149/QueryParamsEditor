@@ -1,6 +1,6 @@
 {
   "name": "query-params-editor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Firefox extension to add/override GET URL parameters",
   "main": "background.js",
   "scripts": {
